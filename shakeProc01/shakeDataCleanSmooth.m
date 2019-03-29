@@ -43,7 +43,7 @@ col_header={'Old Time [sec]','Time [sec]','Vout [V]',...
     'g1 raw [g]','g1 smooth [g]','g2 raw [g]','g2 smooth [g]'};
 
 fprintf(' Writing Clean Data...\n')
-cleanName = strjoin({fileName(1:(end-3)), 'clean.xls'});
+cleanName = strjoin({fileName(1:(end-3)), 'clean.xls'},'');
 xlswrite(cleanName,col_header);
 xlswrite(cleanName,cleanData,1,'A2')
 fprintf('Clean Data Saved as: %s\n', cleanName)

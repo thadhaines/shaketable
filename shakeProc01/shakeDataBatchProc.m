@@ -5,14 +5,18 @@
 
 %   History:
 %   03/28/19    13:15   init
+%   03/29/19    10:09   verified 'b' version of functions (for old MATLAB)
 
 %% init MATLAB
 clear; format compact; clc; close all;
 
 %% Test of single file
-%fileName = 'MatLAB_01_20190226_10-24-18.csv';
+fileName = 'MatLAB_01_20190226_10-24-18.csv';
 
-%cleanName = shakeDataCleanSmoothb( fileName );
+% clean data and export xls
+cleanName = shakeDataCleanSmooth( fileName );
+shakeDataPlotSub(cleanName)
 
-cleanName = 'MatLAB_01_20190226_10-24-18.csv';
-shakeDataPlotSubRaw(cleanName)
+% Plot raw data
+rawName = 'MatLAB_01_20190226_10-24-18.csv';
+shakeDataPlotSubRaw(rawName)

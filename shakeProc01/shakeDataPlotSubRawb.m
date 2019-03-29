@@ -1,4 +1,4 @@
-function [  ] = shakeDataPlotSubRaw( rawName )
+function [  ] = shakeDataPlotSubRawb( rawName )
 %shakeDataPlotSub Creates Figure with subplots from raw data file
 fz= 13; % font Size
 grey = [.7 .7 .7];
@@ -10,9 +10,11 @@ t = rawData(:,1);
 Vout = rawData(:,2);
 LED = rawData(:,3);
 g1 = rawData(:,4);
-g1S = smoothdata(rawData(:,4),'movmean',50); % For new MATLAB
+g1S = smooth(rawData(:,4),'moving',50);% for old MATLAB
+%g1S = smoothdata(rawData(:,4),'movmean',50); % For new MATLAB
 g2 = rawData(:,5);
-g2S = smoothdata(rawData(:,5),'movmean',50); % For new MATLAB
+g2S = smooth(rawData(:,5),'moving',50); % for old MATLAB
+%g2S = smoothdata(rawData(:,5),'movmean',50); % For new MATLAB
 
 figure
 subplot(3,1,1)
