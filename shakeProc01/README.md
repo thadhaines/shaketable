@@ -4,10 +4,11 @@ Main file = shakeDataBatchProc.m
 
 Parser/Cleaner = shakeDataCleanSmooth.m
 
-shakeDataPlot = Makes three individual plots of CLEAN data
+shakeDataPlot(cleanedData) = Makes 3 figures of cleanedData
 
-shakeDataPlotSub = Makes 1 Figure with subplots of CLEAN data
+shakeDataPlotSub(cleanedData) = Makes 1 Figure with subplots of cleanedData - shows filtered data
+shakeDataPlotSub2(cleanedData, [xLow, xHigh]) = Makes 1 Figure with subplots of un-filtered cleanedData, optional xlimit input
 
-shakeDataPlotSubRaw = Makes 1 Figure with subplots of RAW data
+shakeDataPlotSubRaw(rawData) = Makes 1 Figure with subplots of rawData
 
 Note: functions with a 'b' appended are made to work with older version of MATLAB.
